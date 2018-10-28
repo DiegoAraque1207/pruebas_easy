@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  calorias: 1.5
+  vegetariano: false
+  precio: MyString
+  tipo_ingrediente: MyString
+  consejo_ingrediente: MyText
+
+two:
+  nombre: MyString
+  calorias: 1.5
+  vegetariano: false
+  precio: MyString
+  tipo_ingrediente: MyString
+  consejo_ingrediente: MyText

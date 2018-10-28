@@ -1,0 +1,54 @@
+
+#select_ingredient, #label_button {
+    margin-top: 5px;
+}
+
+#select_medida{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#btn-agregar{
+    margin-top: 10px;
+}
+#label_button{
+    margin-top: 5px;
+}
+#tabla{
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: #fffaf0;
+    padding: 0;
+    width: 380px;
+    height: 300px;
+    overflow-y: scroll;
+}
+#cont{
+    max-width: 745px;
+}
+
+#tabla_i{
+    margin-left: 5px;
+}
+
+#btn_usar{
+    width: 53px
+}
+
+.quantity{
+    box-sizing: border-box;
+}
+
+.table{
+    margin-left: 0px;
+    background-color: #ffebcd;
+    border-color: #fdfcf3;
+}
+
+
+#font, #select_medida, #catidad_label, #select_ingredient{
+    font-family: 'Niramit', sans-serif;
+}
+
+#font_i, #sel_cant, #sel_ingre, #canti{
+    font-family: 'Roboto', sans-serif;
+}

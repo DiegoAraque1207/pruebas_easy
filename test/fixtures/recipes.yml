@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  receta: MyText
+  vegetariano: false
+  duracion_preparacion: 1.5
+  numero_comensales: 
+
+two:
+  nombre: MyString
+  receta: MyText
+  vegetariano: false
+  duracion_preparacion: 1.5
+  numero_comensales: 

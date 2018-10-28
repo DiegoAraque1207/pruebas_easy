@@ -1,0 +1,40 @@
+{
+  "name": "package-upload.json",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "babel-preset-react": "^6.24.1",
+    "mdbreact": "^4.8.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-modal": "^3.6.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-select": "^2.0.0-beta.7"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.1"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoAraque1207/EasyCooking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoAraque1207/EasyCooking/issues"
+  },
+  "homepage": "https://github.com/DiegoAraque1207/EasyCooking#readme"
+}

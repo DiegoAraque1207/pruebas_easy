@@ -1,0 +1,44 @@
+.card-ingresodat{
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;  
+  margin: 20px;
+}
+
+.card-ingresoim{
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    margin: 20px;
+    height: 460px;
+
+}
+
+.card-ingresodat .card-body{
+    background-color: #f08b2d;
+}
+
+.card-ingresodat .form-control{
+    background-color: #eba25f;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.btn-subir {
+    color: white;
+    background-color: #f08b2d;
+}
+
+.btnsubir .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  palabra_clave: MyString
+  receta: MyString
+
+two:
+  palabra_clave: MyString
+  receta: MyString

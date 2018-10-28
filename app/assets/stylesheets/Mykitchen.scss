@@ -1,0 +1,48 @@
+/*Título*/
+
+h1{
+        font-size: 70px;
+        color: grey;
+}
+
+h1, #tabn, #myrecontent, {
+    font-family: 'Niramit', sans-serif;
+}
+
+#content {
+    padding: 5em;
+    height: 100%;
+    overflow: hidden;
+    background:url('https://static1.squarespace.com/static/57a638c5ebbd1acee619193b/t/5b5f88baf950b77867e03e81/1529434543262/food+background.png?format=1500w');
+}
+
+a{
+    color: #995400;
+    font: 200;
+}
+
+a:hover{
+    color: grey;
+    font-style: bold;
+}
+
+#f{
+    background:rgba(255,255,255,0.6);
+}
+
+#discovertitle{
+    padding: 1em;
+    color: #EE7600;
+}
+
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EE7600 -moz-use-text-color #EE7600;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 10px 0;
+  }

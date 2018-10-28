@@ -1,0 +1,49 @@
+.card-login{
+  position:relative;
+  left:30%;
+}
+
+.header-login {
+  margin: 10px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.form-login .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+  margin-top: 2%;
+}
+  
+  
+.form-login {
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+    
+}
+  
+.body-login{
+  flex-direction: row;
+  align-items: center;
+  flex:5;
+  justify-content: center;
+}
+  
+.redes btn{
+  font-size: 80%;
+  border-radius: 5rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}

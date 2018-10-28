@@ -1,0 +1,29 @@
+#board{
+    background-color: darkorange;
+    width: auto;
+    height: 350px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+}
+
+#coll{
+    width: 200px;
+    border-color: black;
+    height: 300px;
+    border: 8px;
+    background-color: lightgoldenrodyellow;
+    margin: 5px;
+    display: inline-block;
+    overflow-y: auto;
+}
+
+#tarjeta{
+    width: 180px;
+    background-color: lightskyblue;
+    height: 100px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+}

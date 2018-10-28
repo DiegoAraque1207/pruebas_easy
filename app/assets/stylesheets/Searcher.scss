@@ -1,0 +1,109 @@
+
+  .wrapper {
+    padding: 5px;
+    max-width: 960px;
+    width: 95%;
+    margin: 20px auto;
+}
+header {
+    padding: 0 15px;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.column {
+    flex: 1;
+    border: 1px solid gray;
+    margin: 2px;
+    padding: 10px;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  align-items: center;
+}
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+        margin-bottom: 5px;
+    flex-basis: 40%;
+        &:nth-last-child(2) {
+            margin-right: 0;
+        }
+        &:last-child {
+            flex-basis: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .columns .column {
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+}
+
+
+#vegetales{
+  background-color: green;
+}
+#proteinas{
+  background-color: red;
+}
+#carbohidratos{
+  background-color: yellow;
+}
+
+
+.header-login {
+  margin: 10px auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+  margin-top: 2%;
+}
+
+
+.form-login {
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+    
+}
+
+.body-login{
+  flex-direction: row;
+  align-items: center;
+  flex:5;
+  justify-content: center;
+}
+
+.redes btn{
+  font-size: 80%;
+  border-radius: 5rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+  
+  
+

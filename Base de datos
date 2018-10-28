@@ -1,0 +1,78 @@
+﻿
+agregar usuario
+
+user = User.new(nombre: "Nicolas Torres",nombre_usuario: "nicolasto",correo: "nikolasto2094@gmail.com",contraseña:"1234")
+user.save
+
+------------------------------------
+agregar cocina
+ se crea automaticamente
+
+------------------------------------
+agregar plan
+
+plan1 = Plan.new(nombre_plan: "A ponerme en forma",tipo_plan: "saludable")
+plan1.kitchen_id = 1 # es la id de COCINA no de usuario
+plan1.save
+
+plan2 = Plan.new(nombre_plan: "domingos en casa",tipo_plan: "Recetas deliciosas")
+plan2.kitchen_id = 1
+plan2.save
+
+-------------------------------------
+agregar dia
+
+dia = Day.new(dia: "lunes", descripcion: "Dia ocupado, pero quiero cuidarme")
+dia.plan_id=1 #ID de PLAN
+dia.save
+
+-------------------------------------
+agregar receta
+
+receta = Recipe.new(nombre: "Agua Hervida", receta: "se agrega agua a una cacerola y se deja hervir :v",vegetariano: true, duracion_preparacion: 5.5, numero_comensales: 4, guarniciones:"puedes agregarle cafe")
+receta.save
+
+-------------------------------------
+agregar consejo
+
+consejo = Advice.new(titulo_consejo: "Agrega sal", consejo: "es mejor que le agregues algo de sal al agua")
+consejo.recipe_id = 1 # ID de la receta
+consejo.save
+
+-------------------------------------
+crear comentario
+
+comentario = Comment.new(comentario: "esta bueno, ps este es un comentario q me hago a mi mismo")
+comentario.recipe_id = 1 # ID a la receta q se comenta
+comentario.user_id = 1 # usuario q hace el comentario
+comentario.save
+
+-------------------------------------
+agregar Ingrediente
+
+ingrediente = Ingredient.new(nombre:"agua",calorias:0.0, vegetariano:true,precio: "2 mil la botella", tipo_ingrediente:"natural?", consejo_ingrediente: "evite utilizar agua de la llave")
+ingrediente.save
+
+********************************************************
+
+*** Asociacion muchos a muchos ***   Con cocina y receta
+
+
+se tiene cocina_nico (id 1) y agua_hervida (id 1) , huevos_pericos (id 2). Queremos decirle a rails que la cocina de nico tiene esas dos recetas agua y huevos
+
+basta con hacer.
+
+>> cocina_nico.recipe_ids = [1,2]
+
+-------------------------------------
+Ahora suponiendo que hay otra cocina con id 2, y queremos decirle que los huevos estan tanto en la cocina de nico como en la cocina de id 2 basta con hacer.
+
+>> huevos_pericos.kitchen_ids = [1,2]  
+
+
+Si le pusieramos  huevos_pericos.kitchen_ids = [2]  entonces rails elimina el registro que asocia los huevos con la cocina 1 y agrega el registro con la cocina 2
+
+
+
+
+ 

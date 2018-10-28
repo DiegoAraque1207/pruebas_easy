@@ -1,0 +1,2 @@
+module BusquedaRecetasHelper
+end
