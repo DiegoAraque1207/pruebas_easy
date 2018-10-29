@@ -12,8 +12,8 @@ class MyKitchen extends React.Component{
             <div>
                 <Header/>
                 <div class = "container-fluid" id = "content">
-                    <h1 align = "center" className="my-4"><strong>Mi Cocina</strong></h1>
-                    <div id = "fuck" class = "container">
+                    <h1 align = "center" class="my-4"><strong>Mi Cocina</strong></h1>
+                    <div class = "container">
                      <NavbarMK/>
                     </div>
                     <div class = "container">
@@ -31,7 +31,7 @@ class MyKitchen extends React.Component{
                         </div>
                     </div>
                 </div>
-                <FooterPage/>x
+                <FooterPage/>
             </div>
             )
         }

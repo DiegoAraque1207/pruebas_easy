@@ -8,18 +8,18 @@ class SignUpController < ApplicationController
     if user.valid?
       puts "nuevo usuario"
       user.save
-      msg = "Usuario creado"
+      msg = 'Usuario creado'
       puts msg
 
       ans = {
-          mensaje: "#{msg}", id: 0
+          mensaje: "#{msg}", id: true
       }
-
+      session[:current_user_id] = user.id
     else
 
       msg = 'Usuario ya existe'
       ans = {
-          mensaje: "#{msg}", id: 1
+          mensaje: "#{msg}", id: false
       }
 
 

@@ -6,7 +6,7 @@ import Entry from './Recipes/Entry';
 class EntryRecipe extends React.Component {
     render() {
         return (
-            <div id="main">
+            <div>
                 <Header/>
                 <Entry/>
             </div>  

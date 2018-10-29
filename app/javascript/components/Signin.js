@@ -1,8 +1,8 @@
 import React from 'react'
 
 class Signin extends React.Component {
-    /*Para enviar  los datos se debe crear un state en el cual se guardan las varibales. 
-    al cmabiar estas variables con el metodo set state se reenderiza automaticamente el componente 
+    /*Para enviar  los datos se debe crear un state en el cual se guardan las variables.
+    al cambiar estas variables con el metodo set state se reenderiza automaticamente el componente
     el metodo constructor tambien se debe crear si o si*/
     state = {
         mensaje: "prueba",
@@ -18,22 +18,24 @@ class Signin extends React.Component {
     listenerSignIn(e) {
         if (document.getElementById("inputEmail") != null && document.getElementById("inputPassword") != null) {
             const payload = { email: document.getElementById("inputEmail").value, pass: document.getElementById("inputPassword").value }
-            fetch(`interface/login`, {
+            fetch(`sign_in`, {
                 method: "post",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
             })
                 .then(resp => resp.json())
                 .then(data => this.setState(data))
-                .catch(_ => alert("Error en el proceso"))
                 .then(() => alert(this.state.mensaje))
-                .then(() => console.log(this.state.mensaje))
+                .then(() => this.to_kitchen())
+            //alert("4 segundos");
+            setTimeout(console.log("4 segundos?"),4000);
 
-            return;
+        }}
 
-        }
-    }
 
+to_kitchen(){
+    if(this.state.id==true){location.href="MyKitchen";}
+}
     render() {
         return (
             <div className="container">

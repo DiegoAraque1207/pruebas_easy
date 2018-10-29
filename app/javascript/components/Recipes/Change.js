@@ -31,10 +31,10 @@ class Change extends React.Component {
                                         <div class="form-group col-md-2">
                                             <select id="inputDiners" class="form-control">
                                                 <option selected></option>
-                                                <option value="1">2</option>
-                                                <option value="2">4</option>
-                                                <option value="3">6</option>
-                                                <option value="4">8</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
                                             </select>
                                         </div>
                                         <div class="form-group text-white col-md-3">
@@ -44,16 +44,13 @@ class Change extends React.Component {
                                             <select id="inputTime" class="form-control">
                                                 <option selected></option>
                                                 <option value="1">15 minutos</option>
-                                                <option value="2">20 minutos</option>
-                                                <option value="3">30 minutos</option>
-                                                <option value="4">40 minutos</option>
-                                                <option value="5">45 minutos</option>
-                                                <option value="6">50 minutos</option>
-                                                <option value="7">60 minutos</option>
-                                                <option value="8">75 minutos</option>
-                                                <option value="9">90 minutos</option>
-                                                <option value="10">95 minutos</option>
-                                                <option value="11">120 minutos</option>
+                                                <option value="2">30 minutos</option>
+                                                <option value="3">45 minutos</option>
+                                                <option value="4">60 minutos</option>
+                                                <option value="5">75 minutos</option>
+                                                <option value="6">90 minutos</option>
+                                                <option value="7">105 minutos</option>
+                                                <option value="8">120 minutos</option>
                                             </select>
                                         </div>
                                     </div>
@@ -86,6 +83,7 @@ class Change extends React.Component {
                         </form>
                         <div class="btnsubir text-right ">
                             <button type="button" class="btn btn-subir btn-lg text-uppercase">Subir receta</button>
+                            <button type="button" className="btn btn-subir btn-lg text-uppercase">Eliminar receta</button>
                         </div>
 
                     </div>

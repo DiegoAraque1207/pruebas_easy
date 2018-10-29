@@ -2,8 +2,6 @@ import React from 'react'
 import Header from './Structure/Header';
 import Select from 'react-select';
 
-import Modal from 'react-modal';
-
 
 
 const scaryAnimals = [
@@ -102,15 +100,20 @@ class App extends React.Component{
             <div className="app">
                 <div className="container" id="cont">
                     <div className="row">
-                        <div className="col-sm-6">
-                            <label htmlFor="sel1" id="select_ingredient">Ingrediente:</label>
-                            <Select value={selectedOption} options={scaryAnimals} onChange={this.handleChange} id="sel_ingre" />
+                        <div className="col-sm-4">
+                            <div className="row">
+                                <div className="col-sm-12">
+                                    <label htmlFor="sel1" id="select_ingredient">Ingrediente:</label>
+                                    <Select value={selectedOption} options={scaryAnimals} onChange={this.handleChange} id="sel_ingre" />
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-sm-12">
+                                    <label htmlFor="Cantidad" id="catidad_label">Cantidad:</label>    
+                                    <Select value={selectedOption_me} options={medidas} onChange={this.handleChange_me} id="sel_cant"/>
+                                </div>
+                            </div>
                         </div>
-                            
-                        <div className="col-sm-6">
-                            <label htmlFor="Cantidad" id="catidad_label">Cantidad:</label>    
-                            <Select value={selectedOption_me} options={medidas} onChange={this.handleChange_me} id="sel_cant"/>
-                        </div>                        
                         <TablaIngredientes datas={data} id="tabla_ingre" />
                     </div>               
                 </div>
@@ -149,35 +152,33 @@ class TablaIngredientes extends React.Component{
     render(){
 
     return(
-        <div className="container">
-            <div className="row" id="tabla_i">
-                <div className="col-sm-4" id="label_button">   
-                    <div className="row">
-                        <label htmlFor="sel2" id="select_medida">Medida:</label>
-                    </div>
-                    <div className="row">
-                        <input type="text" className="quantity" id="canti" size="10" onChange={logChange_can}/>
-                    </div>
-                    <div className="row" id="btn-agregar">
-                        <button type="button" className="btn btn-primary" onClick = {this.someMethod} >Agregar</button>
-                    </div>
-                </div>   
-
-                <div className="col-sm-8" id="tabla">  
-                    <table className = "table" >
-                        <thead id ="cabeza_t">
-                            <tr>
-                                <th id = "font" scope="col">Ingrediente</th>
-                                <th id = "font" scope="col">Cantidad</th>
-                                <th id = "font" scope="col">Medida</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <Columns/>
-                    </tbody>
-                    </table>            
+        <div className="row" id="tabla_i">
+            <div className="col-sm-3" id="label_button">   
+                <div className="row">
+                    <label htmlFor="sel2" id="select_medida">Medida:</label>
                 </div>
+                <div className="row">
+                    <input type="text" className="quantity" id="canti" size="10" onChange={logChange_can}/>
+                </div>
+                <div className="row" id="btn-agregar">
+                    <button type="button" className="btn btn-primary" onClick = {this.someMethod} >Agregar</button>
+                </div>
+            </div>   
+
+            <div className="col-sm-9" id="tabla">  
+                <table className = "table" >
+                    <thead id ="cabeza_t">
+                        <tr>
+                            <th id = "font" scope="col">Ingrediente</th>
+                             <th id = "font" scope="col">Cantidad</th>
+                            <th id = "font" scope="col">Medida</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <Columns/>
+                   </tbody>
+                </table>            
             </div>
         </div>
         )
@@ -193,7 +194,7 @@ class Columns extends React.Component{
         <td id = "font_i">{dato.cantid}</td>
         <td id = "font_i">{dato.medi}</td>
         <td>
-        <button onClick={()=> alert('Eliminar?') } className="btn btn-primary" id="btn_usar">Del</button>
+        <button onClick={()=> alert('holi') } className="btn btn-primary" id="btn_usar">Usar</button>
         </td>
         </tr>
         )
@@ -201,78 +202,15 @@ class Columns extends React.Component{
     }
 }
 
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
- 
-// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-//Modal.setAppElement('index')
- 
-class Contenedor extends React.Component {
-  constructor() {
-    super();
- 
-    this.state = {
-      modalIsOpen: false
-    };
- 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
- 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
- 
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.subtitle.style.color = "ligthblue";
-  }
- 
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
- 
-  render() {
-    return (
-      <div>
-        <button onClick={this.openModal}>Aqui</button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-            <h2 ref={subtitle => this.subtitle = subtitle}>Ingresa los ingredientes</h2>
-               
-            <div className="container">
-                <App/>
-            </div>
-            <button onClick={this.closeModal}>close</button>
-        </Modal>
-      </div>
-    );
-  }
-}
-
-
-
 class FormInputIngedients extends React.Component{
     
     render(){
         return(
             <div>
-                <Contenedor/>
+                <Header/>
+                <div>
+                    <App/>
+                </div>
             </div>   
         )
     }

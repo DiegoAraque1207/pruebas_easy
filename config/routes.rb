@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
 
+  resources :recipes
+  post '/recipes', to: 'recipes#create'
+
+
+
+
   post 'interface/sign_up', to: 'sign_up#registration'
+
 
   root 'pages#index'
 

@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :comments, -> {where user_id: ids}, dependent: :destroy
 
   validates :nombre, :contraseña, :correo, :nombre_usuario, presence: true
-  validates :correo, :nombre_usuario, uniqueness: true
+  validates :correo, uniqueness: true
 
   after_save :createKitchen
 

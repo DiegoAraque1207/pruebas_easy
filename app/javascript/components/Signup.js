@@ -2,12 +2,12 @@ import React from 'react'
 import FooterPage from './Structure/Footerpage'
 
 
- class Signup extends React.Component{
+class Signup extends React.Component{
 
 
     state = {
         mensaje: "",
-        id: 0
+        id: false
     }
     constructor(props) {
         super(props)
@@ -15,6 +15,8 @@ import FooterPage from './Structure/Footerpage'
         this.listenerSignUp = this.listenerSignUp.bind(this)
     }
     listenerSignUp(e){
+
+
 
         if (document.getElementById("inputPassword").value != document.getElementById("inputConfirmPassword").value ){
             alert("la contraseña no coincide")}
@@ -36,13 +38,16 @@ import FooterPage from './Structure/Footerpage'
                   //.catch(_ => alert( "Error en el proceso" ))
                 .then(() => alert(this.state.mensaje))
                 .then(() => console.log(this.state.mensaje))
-
-            return;
+                .then(() => this.to_kitchen())
+            //alert("4 segundos");
+            setTimeout(alert("Al crear un usuario, se aceptan los terminos y condiciones"),4000);
 
         }}
     }
 
-
+    to_kitchen(){
+        if(this.state.id==true){location.href="MyKitchen";}
+    }
     render(){ return(
                 <div className="container">
                 <div className="row">
@@ -69,12 +74,8 @@ import FooterPage from './Structure/Footerpage'
                             <input type="password" id="inputConfirmPassword" className="form-control" placeholder="Password" required></input>
                             <label for="inputConfirmPassword">Confirmar contraseña</label>
                           </div>
-            
-                          <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onClick={this.listenerSignUp} > >Registrarme</button>
-                          <a className="d-block text-center mt-2 small" href="/sign_in" target="_self">Iniciar sesión</a>
-                          <hr className="my-4"></hr>
-                          <button className="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i className="fab fa-google mr-2"></i> Registrarme con Google</button>
-                          <button className="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i className="fab fa-facebook-f mr-2"></i> Registrarme con Facebook</button>
+                            <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onClick={this.listenerSignUp} > >Registrarme</button>
+                          <a class="d-block text-center mt-2 small" href="/sign_in" target="_self">Iniciar sesión</a>
                         </form>
                       </div>
                     </div>
@@ -87,3 +88,9 @@ import FooterPage from './Structure/Footerpage'
 }
 
 export default Signup
+
+/*
+                         <hr class="my-4"></hr>
+                         <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Registrarme con Google</button>
+                          <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Registrarme con Facebook</button>
+                          */

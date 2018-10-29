@@ -11,21 +11,24 @@ class MyRecipes extends React.Component{
             return(
                 <div>
                 <Header/>
+                <div class = "container-fluid" id = "content">
+                <h1 align = "center" class="my-4"><strong>Mis Recetas</strong></h1>
                 <div class = "container">
                      <NavbarRc/>
                 </div>
                 <div class = "container">
                    <div class = "row">
-                       <div className="col-lg-3">
+                       <div id = "f" class="col-lg-3">
                           <MKLeftMenu/>
                        </div> 
-                       <div className="col-lg-9">
+                       <div id = "f" class="col-lg-9">
                           <div>
                               .
                           </div>
                           <MyRecipesContent/>
                        </div>      
                    </div>
+                </div>
                 </div>
                 <FooterPage/>
             </div>

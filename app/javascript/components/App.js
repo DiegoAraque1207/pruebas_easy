@@ -4,7 +4,7 @@ import Home from './Home'
 import About from './About'
 import Signin from './Signin'
 import Signup from './Signup'
-import SearchByIngredients from './SearchByIngredients'
+// import SearchByIngredients from './SearchByIngredients'
 import FormInputIngredients from './FormInputIngredients'
 import PlanningFood from './PlanningFood'
 import MyKitchen from './MyKitchen/MyKitchen'
@@ -24,7 +24,7 @@ class App extends React.Component{
                      <Route exact path = "/about" component = {About} />
                      <Route exact path = "/sign_in" component = {Signin} />
                      <Route exact path = "/sign_up" component = {Signup} />
-                     <Route exact path = "/sbingredients" component = {SearchByIngredients} />
+                     {/* <Route exact path = "/sbingredients" component = {SearchByIngredients} /> */}
                      <Route exact path = "/input_ingredients" component = {FormInputIngredients} />
                      <Route exact path = "/week_plan" component = {PlanningFood} />
                      <Route exact path = "/mykitchen" component = {MyKitchen} />

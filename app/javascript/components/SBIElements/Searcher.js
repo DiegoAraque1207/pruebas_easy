@@ -1,48 +1,62 @@
 import React from 'react'
+import Typing from './SearcherElements/Typing'
+import ByCategories from './SearcherElements/ByCategories'
+
 
 class Searcher extends React.Component{
+
+  constructor() {
+    super(); 
+    this.state = { showSearchBar: false }
+    this.state = { showCategories: false }
+    this.state = { colored: false}
+    this.state = { colored2: false}
+  } 
+
+  _showSearchBar = (bool) => {
+    this.setState({
+      showSearchBar: bool,
+      showCategories : !bool,
+      colored: bool,
+      colored2: !bool
+    });
+  }
+
+  _showCategories = (bool) => {
+    this.setState({
+      showCategories: bool,
+      showSearchBar : !bool,
+      colored2: bool,
+      colored: !bool
+    });
+  }
+
         render(){
-            return(
-                <div id = "d" className="wrapper">
-                < div id = "division"  class = "jumbotron">
-                    <h3>Construye tu platillo</h3>
-                    <p>Elige los ingredientes que desees para brindarte las mejores opciones de comida:</p>
-                    <form>
-                        <div className="form-row">
-                            <div className="col">
-                            <input type="text" className="form-control" placeholder=""></input>
-                            </div>
-                            <h1>+</h1>
-                            <div className="col">
-                            <input type="text" className="form-control" placeholder=""></input>
-                            </div>
-                            <h1>+</h1>
-                            <div className="col">
-                            <input type="text" className="form-control" placeholder=""></input>
-                            </div>
-                            <h1>+</h1>
-                            <div className="col">
-                            <button type="button" className="btn btn-primary">Encontrar recetas</button>
-                            </div>
-                        </div>
-                        </form>
-                    </div>  
-            <section className="columns">     
-                <div id = "vegetales" className="column">
-                    <h2>Vegetales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione architecto necessitatibus cum praesentium dolor totam voluptatibus recusandae?</p>
-                </div>  
-                <div id = "proteinas" className="column">
-                    <h2>Proteinas</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione architecto necessitatibus cum praesentium dolor totam voluptatibus recusandae? Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis nostrum.</p>
+       
+            let btn_class = this.state.colored ? "offButton" : "onButton";
+            let btn_class2 = this.state.colored2 ? "offButton" : "onButton";
+
+            
+        return(
+            <div>
+              <div>.</div>
+               <div id = "si" class = "container-fluid">
+              <h5 ><strong>¿Cómo deseas buscar los ingredientes?</strong></h5>   
                 </div>
-              
-              <div id = "carbohidratos" className="column">
-                    <h2>Carbohidratos</h2>
-                    <p>Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione architecto cum praesentium voluptatibus recusandae?</p>
+                <div>.</div>
+              <div class = "row">
+              <div class = "col-lg-6">
+              <button className={btn_class} onClick= {this._showSearchBar.bind(null, true)}> Escribir </button>
                 </div>
-                
-            </section>	
+                <div class = "col-lg-6">
+                <button className={btn_class2} onClick= {this._showCategories.bind(null, true)}>Categoría</button>
+                </div>
+                <div>.</div>
+                <div id = "j" class = "container">
+                { this.state.showSearchBar && (<div><Typing/></div>) }
+                { this.state.showCategories && (<div><ByCategories/></div>) }
+                </div>
+              </div>   
             </div>
             )
         }
